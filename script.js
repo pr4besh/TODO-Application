@@ -16,7 +16,12 @@ function addTask(e) {
         const li = document.createElement('li');
         li.className = 'tasklist';
         li.appendChild(document.createTextNode(taskInput.value));
-        // const link = document.createElement
+
+        const link = document.createElement('a');
+        link.className = "done-task";
+        link.innerHTML = "<i class='bx bx-x'></i>";
+        li.appendChild(link);
+
         taskList.appendChild(li);
         taskInput.value = '';
     }

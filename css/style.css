@@ -30,6 +30,7 @@ ul {
 
 .bx {
     float: right;
+    cursor: pointer;
 }
 
 .line {
