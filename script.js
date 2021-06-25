@@ -6,7 +6,14 @@ const taskList = document.querySelector(".collection");
 loadEventListeners();
 
 function loadEventListeners() {
+    // Event Listener for adding task 
     taskForm.addEventListener('submit', addTask);
+    // Event Listener for clearing all tasks 
+    //when Clear button is clicked
+    taskClear.addEventListener('click', clearAll);
+    // Event Listener for clearing one task
+    //when cross symbol is clicked
+    taskList.addEventListener('click', deleteItem);
 }
 
 function addTask(e) {
@@ -27,4 +34,16 @@ function addTask(e) {
     }
 
     e.preventDefault();
+}
+
+function deleteItem(e) {
+    if (e.target.parentElement.classList.contains('done-task')) {
+        if (confirm("Are you sure?")) {
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+function clearAll() {
+    taskList.innerHTML = '';
 }

@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
 }
 
 h2 {
     color: #000;
-    font-size: 2vmin;
+    font-size: 1.2em;
 }
 
 a {
@@ -25,12 +26,14 @@ ul {
     border: 2px solid #000;
     margin: 2px 0;
     padding: 10px;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 .bx {
     float: right;
     cursor: pointer;
+    font-size: 1.5em;
 }
 
 .line {
@@ -52,7 +55,7 @@ ul {
 
 .layout {
     border: 4px solid #161819;
-    width: 40%;
+    width: 35%;
     height: auto; 
     border-radius: 10px;
     /* box-shadow: 5px 5px rgba(0, 0, 0, 0.6); */
@@ -89,4 +92,11 @@ ul {
 
 #task-list {
     margin-bottom: 20px;
+}
+@media only screen 
+    and (min-width: 250px) 
+    and (max-width: 800px) {
+    .layout {
+        width: 82%;
+    }
 }
