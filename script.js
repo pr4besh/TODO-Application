@@ -2,6 +2,7 @@ const taskForm = document.querySelector("#add-task");
 const taskInput = document.querySelector(".task-input");
 const taskClear = document.querySelector(".clear");
 const taskList = document.querySelector(".collection");
+const emptyWarn = document.querySelector('span');
 
 loadEventListeners();
 
@@ -18,8 +19,9 @@ function loadEventListeners() {
 
 function addTask(e) {
     if (taskInput.value === ''){
-        alert("Empty Field. Add a Task.");
+        emptyWarn.style.display = "block";
     } else {
+        emptyWarn.style.display = "none";
         const li = document.createElement('li');
         li.className = 'tasklist';
         li.appendChild(document.createTextNode(taskInput.value));
