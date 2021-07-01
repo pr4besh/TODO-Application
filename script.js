@@ -99,13 +99,13 @@ function removeTaskFromLocalStorage(taskList) {
         givenTask = JSON.parse(getTasks);
     }
 
-    getTasks.forEach(function(task, index) {
+    givenTask.forEach(function(task, index) {
         if(taskList.textContent === task) {
-            getTasks.slice(index, 1);
+            givenTask.splice(index, 1);
         }
     });
 
-    localStorage.setItem('getTasks', JSON.stringify(getTasks));
+    localStorage.setItem('givenTask', JSON.stringify(givenTask));
 }
 
 function clearAll() {
